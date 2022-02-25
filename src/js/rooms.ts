@@ -88,7 +88,7 @@ export const showRoomInfo = () => {
         start: "bottom bottom",
         toggleClass: { targets: ".room__info", className: "loading-container" },
         once: true,
-        markers: true,
+        // markers: true,
       },
     }
   );
@@ -108,7 +108,7 @@ export const showRooomButton = () => {
           className: "loading-container",
         },
         once: true,
-        markers: true,
+        // markers: true,
       },
     }
   );
