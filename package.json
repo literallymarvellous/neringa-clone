@@ -2,10 +2,9 @@
   "name": "neringa",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel ./public/index.html",
-    "build": "parcel build dist"
+    "build": "parcel build ./public/index.html"
   },
   "keywords": [],
   "author": "",

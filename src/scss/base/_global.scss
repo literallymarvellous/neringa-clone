@@ -1,9 +1,5 @@
 @use "../abstracts/variables" as *;
 
-// body {
-//   overflow: hidden;
-// }
-
 ul {
   margin: 0;
   padding: 0;
@@ -17,4 +13,8 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+img {
+  object-fit: cover;
 }
