@@ -114,7 +114,7 @@ export const showSuites = () => {
           ele.classList.add("hidden");
         });
         iconsMobile.forEach((ele, j) => {
-          ele.classList.remove("hidden");
+          ele.classList.add("hidden");
         });
       }
     });
