@@ -1,0 +1,253 @@
+@use "../abstracts/variables" as *;
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.suites-list {
+  text-transform: uppercase;
+  color: $white;
+}
+
+.hotel {
+  .hotel-features {
+    padding: 8px 0 16px;
+    text-transform: capitalize;
+    padding-left: 8px;
+
+    li {
+      padding: 0;
+    }
+  }
+}
+
+.menu-trigger {
+  margin-top: -6px;
+  color: $white;
+
+  .menu {
+    width: 32px;
+    height: 16px;
+    margin-bottom: 24px;
+    color: $white;
+
+    &__hamburger {
+      width: 100%;
+      height: 100%;
+      color: $white;
+
+      // .ionicon {
+      //   fill: initial;
+      // }
+    }
+
+    &__close {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+  }
+
+  .logo {
+    text-transform: uppercase;
+    line-height: 18px;
+    text-align: center;
+  }
+}
+
+.book {
+  background: $white;
+  color: black;
+  button {
+    text-transform: uppercase;
+    background: inherit;
+    width: 200px;
+    height: 58px;
+    border: none;
+    outline: none;
+    color: inherit;
+  }
+
+  @media screen and (max-width: 770px) {
+    width: calc(100% - $header-space);
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.icons {
+  div {
+    width: 24px;
+    height: 24px;
+    padding: 24px 0;
+  }
+
+  @media screen and (max-width: 630px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 630px) and (max-width: 770px) {
+    bottom: 13%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .suites-list {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  background: $gainsboro;
+  position: fixed;
+  overflow: auto;
+  padding: calc(9rem - 5vw) 1rem;
+
+  @media screen and (min-width: 630px) {
+    padding-inline: 4rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-inline: 6rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-inline: 8rem;
+  }
+
+  // .overlay {
+  //   position: absolute;
+  //   inset: 0;
+  //   height: 100%;
+  //   width: 100%;
+  //   background: red;
+  //   z-index: 18;
+  // }
+}
+
+.heading {
+  position: absolute;
+  inset: 1.7rem 0 0 0;
+  width: fit-content;
+  margin: auto;
+  font-size: 3rem;
+}
+
+.suites-list-mobile {
+  align-self: center;
+
+  ul {
+    padding: 0;
+  }
+
+  & > li {
+    padding: 1.2vw;
+    position: relative;
+
+    span {
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+    }
+
+    .features {
+      li {
+        text-transform: uppercase;
+        padding: 8px 2px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .icons-mobile {
+      div {
+        width: 24px;
+        height: 24px;
+        padding: 20px 0;
+      }
+
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .chevron {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -40%;
+        margin: auto 0;
+        background-image: url("../../public/icons/chevron-down-outline.svg");
+        background-size: 16px 16px;
+        height: 16px;
+        width: 16px;
+
+        @media screen and (min-width: 1024px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .logo-mobile {
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-left: 4px;
+
+    @media screen and (min-width: 630px) {
+      display: none;
+    }
+  }
+}
+
+.showreel {
+  position: absolute;
+  inset: 0;
+  left: 42%;
+  margin: auto 0;
+
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    justify-items: flex-start;
+    align-items: center;
+  }
+
+  .show-list {
+    ul {
+      padding-left: 3rem;
+      padding-top: 20px;
+      border-left: 1px solid $gainsboro-darker;
+
+      li {
+        text-transform: uppercase;
+        padding: 5px 0;
+      }
+    }
+
+    .icons-mobile {
+      padding-left: 3rem;
+      padding-bottom: 20px;
+      border-left: 1px solid $gainsboro-darker;
+
+      div {
+        width: 24px;
+        height: 24px;
+        padding: 20px 0;
+      }
+    }
+  }
+}

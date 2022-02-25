@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+
+.about {
+  background: $white;
+
+  &__heading {
+    padding: 56px 0;
+  }
+
+  p {
+    padding: 40px 0;
+  }
+
+  span {
+    margin-left: 8px;
+  }
+}

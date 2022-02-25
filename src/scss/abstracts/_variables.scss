@@ -1,0 +1,21 @@
+@use "./fonts";
+
+// fonts
+$gt_america_bold: "gt_americabold";
+$gt_america_regular: "gt_americaregular";
+$gt_americabold_italic: "gt_americabold_italic";
+
+$editorial_new_regular: "editorial_newregular";
+$editorial_new_bold: "editorial_newultrabold";
+$editorial_new_light: "editorial_newultralight";
+
+// colors
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$gainsboro: hsl(0, 0%, 90%);
+$gainsboro-darker: hsl(0, 0%, 77%);
+$gray: hsl(0, 0%, 43%);
+$light-gray: hsl(0, 0%, 55%);
+
+// spacing
+$header-space: 2.5rem;

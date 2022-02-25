@@ -1,0 +1,88 @@
+@use "../abstracts/variables" as *;
+
+.halls-wrapper {
+  background: $gainsboro;
+  .rooms {
+    &__hotel {
+      padding: max(50px, 7vw) 0;
+    }
+
+    &__types {
+      isolation: isolate;
+      position: relative;
+      a {
+        display: block;
+      }
+
+      &__container {
+        // position: relative;
+        width: 100%;
+
+        span {
+          position: relative;
+          display: inline-block;
+          padding: 12px 0 6px;
+          transition: padding-left 250ms ease;
+          z-index: 2;
+
+          &::before {
+            content: "";
+            background-image: url("../../public/icons/icon-link-svg.svg");
+            background-repeat: no-repeat;
+            background-position: center left;
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 150ms ease-in-out 100ms;
+          }
+        }
+
+        .room-img-show {
+          @media screen and (min-width: 1024px) {
+            padding-left: 10%;
+            z-index: 5;
+
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+
+        .room-img {
+          width: 100%;
+          @media screen and (min-width: 1024px) {
+            position: absolute;
+            inset: 0;
+          }
+
+          &__container {
+            height: 80%;
+            @media screen and (min-width: 1024px) {
+              display: none;
+              position: relative;
+              max-width: 800px;
+              width: 70%;
+              margin-left: auto;
+            }
+
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      margin: 80px 0 48px;
+    }
+
+    .book-conference {
+      padding: 0 0 64px;
+
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+}

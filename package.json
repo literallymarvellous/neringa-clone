@@ -1,0 +1,23 @@
+{
+  "name": "neringa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./public/index.html",
+    "build": "parcel build dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.1",
+    "@types/node": "^17.0.18",
+    "parcel": "^2.3.1"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^3.6.12",
+    "@splidejs/splide-extension-auto-scroll": "^0.3.7",
+    "gsap": "^3.9.1"
+  }
+}

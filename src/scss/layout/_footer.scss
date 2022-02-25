@@ -1,0 +1,119 @@
+@use "../abstracts/variables" as *;
+
+footer {
+  visibility: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: red;
+}
+
+.footer-wrapper {
+  background: hsl(92, 17%, 34%);
+  text-align: center;
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+
+  .footer {
+    height: 100%;
+    display: grid;
+    grid-auto-flow: row;
+
+    .slider-wrapper {
+      background-color: hsl(92, 17%, 34%);
+      top: -150%;
+      padding-top: 0;
+      margin: 0 -50px;
+
+      @media screen and (max-width: 770px) {
+        top: -110%;
+      }
+
+      .slider {
+        top: 0;
+      }
+
+      .main {
+        animation: loop 10s linear infinite;
+      }
+
+      .word-container {
+        span {
+          margin: 0 52px;
+          font-size: 1.1rem;
+          width: max-content;
+          color: $black;
+        }
+      }
+    }
+
+    &__heading {
+      text-align: center;
+      font-size: clamp(3.5rem, 17vw, 13rem);
+      font-family: $editorial_new_bold;
+      text-transform: uppercase;
+      margin-top: -20px;
+      width: fit-content;
+      margin: 0 auto;
+
+      @media screen and (min-width: 1200px) {
+        margin-top: -48px;
+      }
+    }
+
+    &-logo {
+      .n-logo {
+        margin: 0 auto;
+      }
+    }
+
+    .tc {
+      font-family: $gt_america_regular;
+      text-transform: uppercase;
+      font-weight: 600;
+      align-self: flex-end;
+      font-size: 1rem;
+
+      div {
+        padding: 8px 0;
+      }
+
+      @media screen and (min-width: 630px) {
+        div {
+          display: inline-block;
+          margin: 0 48px;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        div {
+          display: inline-block;
+          margin: 0 64px;
+          width: min-content;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        div {
+          display: inline-block;
+          margin: 0 48px;
+          width: fit-content;
+        }
+      }
+    }
+
+    .copyright {
+      font-family: $gt_america_regular;
+      text-transform: uppercase;
+      padding-top: 8px;
+      font-size: 1.2rem;
+      color: $gray;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}

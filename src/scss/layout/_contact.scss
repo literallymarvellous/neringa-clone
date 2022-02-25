@@ -1,0 +1,107 @@
+@use "../abstracts/variables" as *;
+
+.contact {
+  background: $white;
+
+  &__heading {
+    padding: 80px 0 36px;
+    width: fit-content;
+  }
+
+  &__form {
+    div {
+      padding: 16px 0;
+
+      @media screen and (max-width: 770px) {
+        padding: 24px 0;
+      }
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid $gray;
+      padding-bottom: 8px;
+      width: 100%;
+      font-size: 1.2rem;
+      background: none;
+
+      &::placeholder {
+        text-transform: uppercase;
+        font-family: $gt_america_regular;
+        font-weight: 600;
+        color: $light-gray;
+      }
+
+      &:focus {
+        outline: none;
+        color: $black;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    .name-email {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 24px;
+
+      @media screen and (max-width: 770px) {
+        display: block;
+      }
+    }
+
+    .message {
+      @media screen and (max-width: 770px) {
+        margin-top: -24px;
+      }
+    }
+
+    button {
+      margin: 32px 0;
+      margin-left: -4px;
+      padding: auto 0;
+      border: none;
+      background: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__info {
+    text-transform: capitalize;
+    color: $gray;
+
+    & > div {
+      padding: 16px 0;
+
+      div {
+        padding: 4px 0;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+
+      & > div:nth-of-type(2) {
+        margin-left: 20vw;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    div {
+      margin-right: 16px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+
+.gym-wrapper {
+  background: $gainsboro;
+
+  p {
+    padding: 48px 0 48px;
+  }
+}
