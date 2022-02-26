@@ -85,4 +85,4 @@ export const iconsColorChange = () => {
   });
 };
 
-// export {};
+export { gsap, ScrollTrigger };

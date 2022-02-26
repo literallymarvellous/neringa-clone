@@ -76,6 +76,8 @@ export const showSuites = () => {
   suitesLists.forEach((el, i) => {
     el.addEventListener("mouseenter", () => {
       if (window.innerWidth >= 1024) {
+        console.log("entered");
+        showReel.classList.toggle("hidden");
         features.forEach((ele, j) => {
           if (i === j) {
             ele.classList.remove("hidden");
@@ -103,17 +105,21 @@ export const showSuites = () => {
 
     el.addEventListener("mouseleave", (e) => {
       if (
-        (e.clientX < 450 || e.clientX > 700) &&
+        (e.clientX < showList.getBoundingClientRect().left ||
+          e.clientX > showList.getBoundingClientRect().right) &&
         showList.firstChild &&
         showList.lastChild
       ) {
+        console.log("left");
+        el.style.zIndex = "";
+        showReel.classList.toggle("hidden");
         showList.removeChild(showList.firstChild);
         showList.removeChild(showList.lastChild);
 
-        features.forEach((ele, j) => {
+        features.forEach((ele) => {
           ele.classList.add("hidden");
         });
-        iconsMobile.forEach((ele, j) => {
+        iconsMobile.forEach((ele) => {
           ele.classList.add("hidden");
         });
       }

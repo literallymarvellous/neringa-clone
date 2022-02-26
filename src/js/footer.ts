@@ -1,5 +1,4 @@
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "./animations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +13,22 @@ export const footerShow = () => {
         start: "bottom bottom",
         // markers: true,
         scrub: true,
+      },
+    }
+  );
+};
+
+export const footerLoad = () => {
+  return gsap.fromTo(
+    ".footer",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".contact",
+        start: "start bottom",
+        // markers: true,
+        once: true,
       },
     }
   );
