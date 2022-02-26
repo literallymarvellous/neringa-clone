@@ -20,11 +20,11 @@ export const footerShow = () => {
 
 export const footerLoad = () => {
   return gsap.fromTo(
-    ".footer",
+    ".footer-wrapper",
     { opacity: 0 },
     {
       opacity: 1,
-      delay: 5,
+      delay: 2,
     }
   );
 };
