@@ -21,10 +21,6 @@
   padding: 16px;
 }
 
-// .body-container {
-//   will-change: transform;
-// }
-
 .page-container {
   padding: 0px 10px 100px;
 
@@ -40,7 +36,8 @@
   cursor: grab;
 
   @media screen and (max-width: 770px) {
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     display: grid;
     grid-auto-flow: column;
     margin-right: 0;
@@ -48,6 +45,10 @@
     & div {
       width: 500px;
     }
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 300px;
   }
 
   &::-webkit-scrollbar {

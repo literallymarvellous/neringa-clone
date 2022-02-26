@@ -10,6 +10,10 @@
   grid-auto-flow: column;
   overflow: hidden;
 
+  @media screen and (max-width: 480px) {
+    height: 300px;
+  }
+
   &__container {
     height: 100%;
     width: 6000px;
