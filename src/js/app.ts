@@ -6,7 +6,7 @@ import {
   menuListColorChange,
   stcikyMenu,
 } from "./animations";
-import { footerShow } from "./footer";
+import { footerLoad, footerShow } from "./footer";
 import { menuOpen, menuClose, dropDown, showSuites } from "./header";
 import { showMenu } from "./landing";
 import {
@@ -35,6 +35,7 @@ menuListColorChange();
 iconsColorChange();
 newsSlider();
 footerShow();
+footerLoad();
 showhotel();
 showRooms();
 galleryShow();
