@@ -12,12 +12,9 @@ export const landingIncreaseEffect = () => {
     return gsap.fromTo(
       ".landing-wrapper",
       {
-        // width: "100%",
-        // backgroundSize: "cover",
         backgroundSize: "100% 100%",
       },
       {
-        // width: "125%",
         backgroundSize: "125% 100%",
         scrollTrigger: {
           trigger: ".landing-wrapper",
@@ -37,7 +34,7 @@ export const stcikyMenu = () => {
     scrollTrigger: {
       trigger: ".contact",
       start: "100% bottom",
-      markers: true,
+      // markers: true,
       toggleActions: "play none none reverse",
     },
   });
