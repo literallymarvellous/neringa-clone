@@ -3,24 +3,32 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const landingWrapper = document.querySelector(
+  ".landing-wrapper"
+) as HTMLDivElement;
+
 export const landingIncreaseEffect = () => {
-  return gsap.fromTo(
-    ".landing-wrapper",
-    {
-      backgroundSize: "100% 100%",
-      opacity: 1,
-    },
-    {
-      backgroundSize: "125% 100%",
-      scrollTrigger: {
-        trigger: ".landing-wrapper",
-        start: "top top",
-        // markers: true,
-        scrub: true,
-        toggleActions: "restart none none none",
+  if (window.innerWidth >= 1024) {
+    return gsap.fromTo(
+      ".landing-wrapper",
+      {
+        // width: "100%",
+        // backgroundSize: "cover",
+        backgroundSize: "100% 100%",
       },
-    }
-  );
+      {
+        // width: "125%",
+        backgroundSize: "125% 100%",
+        scrollTrigger: {
+          trigger: ".landing-wrapper",
+          start: "top top",
+          // markers: true,
+          scrub: true,
+          toggleActions: "restart none none none",
+        },
+      }
+    );
+  }
 };
 
 export const stcikyMenu = () => {
@@ -29,7 +37,7 @@ export const stcikyMenu = () => {
     scrollTrigger: {
       trigger: ".contact",
       start: "100% bottom",
-      // markers: true,
+      markers: true,
       toggleActions: "play none none reverse",
     },
   });
