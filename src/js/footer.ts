@@ -24,12 +24,7 @@ export const footerLoad = () => {
     { opacity: 0 },
     {
       opacity: 1,
-      scrollTrigger: {
-        trigger: ".contact",
-        start: "start bottom",
-        // markers: true,
-        once: true,
-      },
+      delay: 5,
     }
   );
 };
